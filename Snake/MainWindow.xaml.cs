@@ -16,11 +16,13 @@ namespace Snake
         Food powerup;
         int cellSize = 20;
         int score = 0;
-            
+        int highScore = 0;
 
         public MainWindow()
         {
             InitializeComponent();
+            MessageBox.Show("jablko (červené) = +1 bod\nborůvka (modrá) = +2 body + zrychlení");
+            txbHighScore.Text = "Největší skóre: ";
             this.WindowState = WindowState.Maximized;
             gameTimer.Interval = TimeSpan.FromMilliseconds(200);
             gameTimer.Tick += GameLoop;
@@ -29,10 +31,16 @@ namespace Snake
 
         void StartGame()
         {
-            MessageBox.Show("jablko (červené) = +1 bod\nborůvka (modrá) = +2 body + zrychlení");
+            
             snake = new Had();
             food = new Food();
             powerup = new Food();
+            txbLastScore.Text = "Poslení skóre: " + score.ToString();
+            if (score > highScore)
+            {
+                highScore = score;
+                txbHighScore.Text = "Největší skóre: " + highScore.ToString();
+            }
             score = 0;
             txbScore.Text = score.ToString();
 
@@ -58,6 +66,7 @@ namespace Snake
                 MessageBox.Show("Game Over!");
                 StartGame();
                 return;
+                
             }
 
             if (head == food.Position)

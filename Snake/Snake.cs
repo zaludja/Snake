@@ -8,7 +8,7 @@ namespace Snake
         public List<Point> Parts { get; private set; } = new List<Point>();
         public Point Direction { get; set; } = new Point(1, 0);
         public int Length { get; set; } = 5;
-
+         
         public Had()
         {
             Reset();

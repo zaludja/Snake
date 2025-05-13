@@ -18,9 +18,9 @@
                    Foreground="White"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
-                   Margin="222,10,0,0" Height="46" Width="54" Background="#FFB80F9B" FontFamily="Algerian" FontWeight="Bold" TextAlignment="Center"/>
-        <TextBlock HorizontalAlignment="Left" Height="46" Margin="10,10,0,0" TextWrapping="Wrap" Text="Vaše skóre:" VerticalAlignment="Top" Width="212" Background="#FFB80F9B" Foreground="White" FontSize="32" FontWeight="Bold" FontFamily="Algerian"/>
-        <TextBlock HorizontalAlignment="Left" Height="330" Margin="10,61,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="Scoreboard:" VerticalAlignment="Top" Width="239" Background="#FFB80F9B" Foreground="White" FontFamily="Algerian" FontSize="32"/>
-        <ListBox  Margin="10,117,751,393" Grid.RowSpan="2" Background="{x:Null}"/>
+                   Margin="222,0,0,0" Height="46" Width="75" Background="#FFB80F9B" FontFamily="Algerian" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Height="46" Margin="10,0,0,0" TextWrapping="Wrap" Text="Vaše skóre:" VerticalAlignment="Top" Width="212" Background="#FFB80F9B" Foreground="White" FontSize="32" FontWeight="Bold" FontFamily="Algerian"/>
+        <TextBlock x:Name="txbLastScore" HorizontalAlignment="Left" Height="46" Margin="302,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Background="#FFB80F9B" Foreground="White" FontFamily="Algerian" FontSize="32" FontWeight="Bold"/>
+        <TextBlock x:Name="txbHighScore" HorizontalAlignment="Left" Height="46" Margin="615,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="336" Background="#FFB80F9B" Foreground="White" FontFamily="Algerian" FontSize="32" FontWeight="Bold"/>
     </Grid>
 </Window>
